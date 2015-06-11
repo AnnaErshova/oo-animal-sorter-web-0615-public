@@ -27,21 +27,14 @@ class AnimalSorter
   end
 
   def to_a
-
     sea_animals = Array.new
     land_animals = Array.new
 
-    @animal_array.each do |animal|
-      if SEA_ANIMALS.include?(animal)
-        sea_animals << animal
-      else
-        land_animals << animal
-      end
-    end
-    [sea_animals,land_animals] # explicit array
+    @animal_array.each {|animal| SEA_ANIMALS.include?(animal) ? sea_animals << animal : land_animals << animal }       
+
+    [sea_animals,land_animals] # explicit array with sea_animals first
     # OR return sea_animals,land_animals
     # sea creatures first, land creatures second
-    # creates a nested array
-  end  
+  end #ends to_a
 
 end
