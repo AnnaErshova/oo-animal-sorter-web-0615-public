@@ -11,8 +11,6 @@
 # Return an array that contains two arrays, the first one
 # should include the sea creatures, the second, land animals.
 
-# Read the test suite for an example of a nested array.
-
 class AnimalSorter
 
   # attr_accessor :SEA_ANIMALS # this is an array
@@ -26,22 +24,23 @@ class AnimalSorter
 
   def initialize(animal_array)
     @animal_array = animal_array
-    #accepts array
   end
 
   def to_a
-    land_animals = []
-    sea_animals = []
 
-    animal_array.each do |animal|
-      if LAND_ANIMALS.include?(animal)
-        land_animals << animal
-      else
+    sea_animals = Array.new
+    land_animals = Array.new
+
+    @animal_array.each do |animal|
+      if SEA_ANIMALS.include?(animal)
         sea_animals << animal
+      else
+        land_animals << animal
       end
     end
     [sea_animals,land_animals]
     # sea creatures first, land creatures second
+    # creates a nested array
   end  
 
 end
