@@ -21,7 +21,7 @@ describe "AnimalSorter" do
     it "is an array" do
       expect(AnimalSorter::SEA_ANIMALS.class).to eq(Array)
     end
-    it "contains strings of land animals" do
+    it "contains strings of sea animals" do
       ["marlin", "octopus", "fish"].each do |sea_animal|
         expect(AnimalSorter::SEA_ANIMALS).to include(sea_animal)
       end
