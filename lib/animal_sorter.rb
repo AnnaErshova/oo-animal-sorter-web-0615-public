@@ -38,7 +38,8 @@ class AnimalSorter
         land_animals << animal
       end
     end
-    [sea_animals,land_animals]
+    [sea_animals,land_animals] # explicit array
+    # OR return sea_animals,land_animals
     # sea creatures first, land creatures second
     # creates a nested array
   end  
